@@ -1,0 +1,39 @@
+{{ define "addFlower" }}
+
+{{ template "header" }}
+<br/>
+<div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <main role="main" class="inner cover">
+                    <h1 class="cover-heating">Форма добавления цветов</h1><br/><br/>
+                    <form action="/savetransaction" method="post">
+                        <div>
+                            <div class="col-md-4">
+                                <input type="text" name="name_fl" id="name_fl" placeholder="Введите название цветка" class="form-control col-md-2"><br>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" name="count_fl" id="count_fl" placeholder="Введите количество цветов" class="form-control col-md-4"><br>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" name="money_fl" id="money_fl" placeholder="Введите количество денежных средств" class="form-control col-md-4"><br>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="datetime-local" name="date_fl" id="date_fl" placeholder="Введите дату поступления" class="form-control"><br>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-warning">Добавить цветы</button>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+{{ template "footer" }}
+
+{{ end }}

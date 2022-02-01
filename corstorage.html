@@ -1,0 +1,49 @@
+{{ define "corstorage" }}
+
+{{ template "header" }}
+<br/>
+<div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <main role="main" class="inner cover">
+                    <h1 class="cover-heating">Форма обновления данных по складу</h1><br/>
+                    <a> Введите данные по продажам и нажмите кнопку "Обновить данные". </a>
+                    <form action="/correctStorage" method="post">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div>
+                            <div class="col-md-4">
+                                <input type="text" name="id" id="id" placeholder="Введите ID" class="form-control col-md-2"><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-md-4">
+                                <input type="text" name="name_fl" id="name_fl" placeholder="Введите название цветка" class="form-control col-md-2"><br>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" name="count_fl" id="count_fl" placeholder="Введите количество цветов" class="form-control col-md-4"><br>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="datetime-local" name="date_fl_shop" id="date_fl_shop" placeholder="Введите дату поступления" class="form-control"><br>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-warning">Обновить данные</button>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+{{ template "footer" }}
+
+{{ end }}

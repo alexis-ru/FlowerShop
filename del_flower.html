@@ -1,0 +1,39 @@
+{{ define "del_flower" }}
+
+{{ template "header" }}
+<br/>
+<div>
+  <div class="modal-body">
+    <div class="container-fluid">
+      <div class="row">
+        <main role="main" class="inner cover">
+          <h1 class="cover-heating">Форма удаления транзакций с контрагентами</h1>
+          <form action="/delflowertrans" method="post">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+
+                    <h5> 1. Посмотреть номер ID транзакции <a href="http://127.0.0.1:3050/data"> на странице </a>, которую надо удалить. </h5>
+                    <h5> 2. Ввести ID транзакции и нажать кнопку "Удалить". </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <input type="text" name="DTrans" id="DTrans" placeholder="Введите ID транзакции" class="form-control col-md-4"><br>
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-warning">Удалить транзакцию</button>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+{{ template "footer" }}
+
+{{ end }}
